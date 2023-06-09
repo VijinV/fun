@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>\</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <!-- place navbar here -->
+    </header>
+    <main class="container text-center mt-5">
+
+        <div class="image">
+            <img src="" alt="">
+        </div>
+        <div class="heading">
+
+            <h1>Do you have a Father</h1>
+
+        </div>
+        <div class="button mt-5 mb-5">
+            <button onclick="no()" class="btn btn-danger">No</button>
+        </div>
+        <div class="btn-yes mt-5 ">
+            <button id="btnys" style="position: absolute;" onmouseenter="Ys()" class="btn btn-success">Yes</button>
+        </div>
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+<script>
+    let flag = 1;
+    function no() {
+
+        alert('You are a DADLESS .Finally you realized that . Congratulations')
+
+    }
+    function getRandomValue(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+
+    function Ys() {
+        let btn = document.getElementById('btnys');
+
+        if (flag) {
+            btn.style.top = getRandomValue(0, window.innerHeight - btn.offsetHeight) + 'px';
+            btn.style.left = getRandomValue(0, window.innerWidth - btn.offsetWidth) + 'px';
+        }
+    }
+
+
+</script>
+
+</html>
